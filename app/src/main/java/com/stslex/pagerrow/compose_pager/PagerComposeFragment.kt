@@ -22,9 +22,9 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.text.style.TextAlign
 import androidx.fragment.app.Fragment
-import com.stslex.pagerrow.pages.FirstPage
+import com.stslex.pagerrow.pages.simple.FirstPage
 import com.stslex.pagerrow.pages.PagerScreen
-import com.stslex.pagerrow.pages.SecondPage
+import com.stslex.pagerrow.pages.simple.SecondPage
 import kotlinx.coroutines.launch
 
 class PagerComposeFragment : Fragment() {

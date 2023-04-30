@@ -1,25 +1,26 @@
-package com.stslex.pagerrow.pages
+package com.stslex.pagerrow.pages.recycler
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.stslex.pagerrow.ItemModel
 
 private val items by lazy {
-    mutableListOf<String>().apply {
+    mutableListOf<ItemModel>().apply {
         repeat(10) { index ->
-            add(index.toString())
+            add(ItemModel(index.toString()))
         }
     }
 }
 
 @Composable
-fun SecondPage(
+fun FirstRecyclerPage(
     modifier: Modifier = Modifier
 ) {
-    SinglePage(
+    SingleRecyclerPage(
         modifier = modifier,
         items = items,
-        selectedColor = Color.Green,
-        unselectedColor = Color.Blue
+        selectedColor = Color.Cyan,
+        unselectedColor = Color.Magenta
     )
 }

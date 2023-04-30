@@ -1,4 +1,4 @@
-package com.stslex.pagerrow.native_pager
+package com.stslex.pagerrow.recycler_pager
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
-import com.stslex.pagerrow.pages.simple.FirstPage
-import com.stslex.pagerrow.pages.simple.SecondPage
+import com.stslex.pagerrow.pages.recycler.FirstRecyclerPage
+import com.stslex.pagerrow.pages.recycler.SecondRecyclerPage
 
-class PageFragment : Fragment() {
+class RecyclerPageFragment : Fragment() {
 
     private val currentPage: Int
         get() = _currentPage
@@ -23,8 +23,8 @@ class PageFragment : Fragment() {
         setViewCompositionStrategy(strategy = ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
         setContent {
             when (currentPage) {
-                0 -> FirstPage()
-                1 -> SecondPage()
+                0 -> FirstRecyclerPage()
+                1 -> SecondRecyclerPage()
             }
         }
     }
@@ -36,7 +36,7 @@ class PageFragment : Fragment() {
         val instance: (Int) -> Fragment
             get() = { pageNum ->
                 _currentPage = pageNum
-                PageFragment()
+                RecyclerPageFragment()
             }
     }
 }

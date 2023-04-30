@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_mainFragment_to_pagerComposeFragment"
             app:destination="@id/pagerComposeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pagerRecyclerFragment"
+            app:destination="@id/pagerRecyclerFragment" />
     </fragment>
     <fragment
         android:id="@+id/pagerLegacyFragment"
@@ -23,4 +26,8 @@
         android:id="@+id/pagerComposeFragment"
         android:name="com.stslex.pagerrow.compose_pager.PagerComposeFragment"
         android:label="Compose Fragment" />
+    <fragment
+        android:id="@+id/pagerRecyclerFragment"
+        android:name="com.stslex.pagerrow.recycler_pager.PagerRecyclerFragment"
+        android:label="Pager Recycler Fragment" />
 </navigation>

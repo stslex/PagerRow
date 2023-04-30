@@ -20,6 +20,13 @@
             android:text="View Pager" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewPagerRecyclerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="View Recycler Pager" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/composePagerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
