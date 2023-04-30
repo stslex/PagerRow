@@ -24,7 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="View Recycler Pager" />
+            android:text="View Pager Recycler View" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewPagerNoComposeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="View No Compose" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/composePagerButton"

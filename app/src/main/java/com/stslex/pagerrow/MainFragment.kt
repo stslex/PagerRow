@@ -34,6 +34,9 @@ class MainFragment : Fragment() {
         binding.viewPagerRecyclerButton.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_pagerRecyclerFragment)
         }
+        binding.viewPagerNoComposeButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_recyclerSimplePageFragment)
+        }
     }
 
     override fun onDestroyView() {

@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_mainFragment_to_pagerRecyclerFragment"
             app:destination="@id/pagerRecyclerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recyclerSimplePageFragment"
+            app:destination="@id/recyclerSimplePageFragment" />
     </fragment>
     <fragment
         android:id="@+id/pagerLegacyFragment"
@@ -29,5 +32,9 @@
     <fragment
         android:id="@+id/pagerRecyclerFragment"
         android:name="com.stslex.pagerrow.recycler_pager.PagerRecyclerFragment"
-        android:label="Pager Recycler Fragment" />
+        android:label="Pager Recycler Fragment (Compose items)" />
+    <fragment
+        android:id="@+id/recyclerSimplePageFragment"
+        android:name="com.stslex.pagerrow.simple_pager.PagerSimpleFragment"
+        android:label="No Compose Variant" />
 </navigation>
