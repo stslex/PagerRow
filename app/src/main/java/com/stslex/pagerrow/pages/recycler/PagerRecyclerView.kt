@@ -14,7 +14,7 @@ class PagerRecyclerView(
     onItemClick: (ItemModel) -> Unit,
     isSelected: (ItemModel) -> Boolean,
     selectedColor: Color,
-    unselectedColor: Color
+    unselectedColor: Color,
 ) : RecyclerView(context) {
 
     private val recyclerAdapter by lazy {
@@ -24,7 +24,6 @@ class PagerRecyclerView(
     init {
         layoutManager = LinearLayoutManager(context, HORIZONTAL, false)
         adapter = recyclerAdapter
-        isNestedScrollingEnabled = false
         layoutParams = LayoutParams(
             MATCH_PARENT,
             WRAP_CONTENT
@@ -33,5 +32,10 @@ class PagerRecyclerView(
 
     fun setItems(items: List<ItemModel>) {
         recyclerAdapter.setItems(items)
+    }
+
+    fun setNestedScroll(isNestedScrollEnabled: Boolean) {
+        isNestedScrollingEnabled = isNestedScrollEnabled
+        rootView.isNestedScrollingEnabled = isNestedScrollEnabled
     }
 }

@@ -17,14 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="View Pager" />
+            android:text="View Pager with Lazy Row" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/viewPagerRecyclerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="View Pager Recycler View" />
+            android:padding="8dp"
+            android:text="View Pager with Recycler View" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/viewPagerNoComposeButton"

@@ -85,6 +85,11 @@ class RecyclerSimplePageFragment : Fragment() {
                 adapter.updateItems(it)
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
+
+        binding.nestedScrollSwitcher.setOnCheckedChangeListener { _, isChecked ->
+            binding.root.isNestedScrollingEnabled = isChecked
+            binding.recyclerView.isNestedScrollingEnabled = isChecked
+        }
     }
 
     companion object {
