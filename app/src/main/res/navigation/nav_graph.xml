@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.stslex.pagerrow.MainFragment"
+        android:label="Select Pager">
+        <action
+            android:id="@+id/action_mainFragment_to_pagerLegacyFragment"
+            app:destination="@id/pagerLegacyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pagerComposeFragment"
+            app:destination="@id/pagerComposeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerLegacyFragment"
+        android:name="com.stslex.pagerrow.native_pager.PagerLegacyFragment"
+        android:label="View Pager" />
+    <fragment
+        android:id="@+id/pagerComposeFragment"
+        android:name="com.stslex.pagerrow.compose_pager.PagerComposeFragment"
+        android:label="Compose Fragment" />
+</navigation>
