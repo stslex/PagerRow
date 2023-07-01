@@ -22,8 +22,8 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.text.style.TextAlign
 import androidx.fragment.app.Fragment
-import com.stslex.pagerrow.pages.simple.FirstPage
 import com.stslex.pagerrow.pages.PagerScreen
+import com.stslex.pagerrow.pages.simple.FirstPage
 import com.stslex.pagerrow.pages.simple.SecondPage
 import kotlinx.coroutines.launch
 
@@ -46,6 +46,9 @@ class PagerComposeFragment : Fragment() {
         modifier: Modifier = Modifier
     ) {
         val pagerState = rememberPagerState(
+            pageCount = {
+                2
+            },
             initialPage = PagerScreen.FIRST.index
         )
         Column(
@@ -56,7 +59,6 @@ class PagerComposeFragment : Fragment() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f),
-                pageCount = 2,
                 state = pagerState
             ) { pageNum ->
                 when (pageNum) {
